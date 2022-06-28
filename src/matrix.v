@@ -87,7 +87,7 @@ module matrix
 
    assign pa[0] = keys_out[0] ? 1'bZ : 1'b0;
    assign pa[1] = keys_out[1] ? 1'bZ : 1'b0;
-	assign pa[2] = 1'bZ; // Pin 3 on PL1 is a GND connection
+   assign pa[2] = 1'bZ; // Pin 3 on PL1 is a GND connection
    assign pa[3] = keys_out[2] ? 1'bZ : 1'b0;
    assign pa[4] = keys_out[3] ? 1'bZ : 1'b0;
    assign pa[5] = keys_out[4] ? 1'bZ : 1'b0;
@@ -143,7 +143,7 @@ module matrix
                  8'h72: keys[4][5] <= rel; // DOWN
                  8'h6b: keys[5][5] <= rel; // LEFT
                  8'h74: keys[6][5] <= rel; // RIGHT
-                 8'h6c: keys[1][6] <= rel; // HOME (CLEAR)					  
+                 8'h6c: keys[1][6] <= rel; // HOME (CLEAR)
                endcase
             end else begin
                rel <= 1'b0;
@@ -202,12 +202,12 @@ module matrix
                  8'h1A: keys[2][5] <= rel; // Z
                                            // Up
                                            // Down
-                 8'h66: keys[5][5] <= rel; // BACKSPACE (left alternative)	
+                 8'h66: keys[5][5] <= rel; // BACKSPACE (left alternative)
                                            // Right
                  8'h29: keys[7][5] <= rel; // SPACE
                  // Row 6
                  8'h5A: keys[0][6] <= rel; // RETURN
-					                            // Home
+                                           // Home
                  8'h76: keys[2][6] <= rel; // ESCAPE (BREAK)
                                            // N/C
                                            // N/C
